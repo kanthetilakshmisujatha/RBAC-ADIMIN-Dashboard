@@ -1,0 +1,150 @@
+/* Role Management Section */
+.role-management {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Same shadow as user management */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Center text */
+}
+
+/* Focused Inputs with Animation */
+.role-management form input:focus,
+.user-management form input:focus {
+  border-color: #3498db; /* Blue border */
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); /* Blue shadow effect */
+  outline: none; /* Removes the default focus outline */
+}
+
+/* Role Name Dropdown Styling */
+.role-name-dropdown {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+  text-align: center; /* Center the dropdown text */
+}
+
+/* Full-width Add Role Button */
+.add-role-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  width: 100%; /* Make the button width 100% of its container */
+  transition: transform 0.2s, background-color 0.3s ease;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.add-role-btn:hover {
+  transform: scale(1.05);
+  background-color: #2980b9;
+}
+
+.add-role-btn:active {
+  background-color: #1f5d8a;
+}
+
+/* Permissions Layout */
+.permissions {
+  display: flex;
+  justify-content: center; /* Centers the checkboxes horizontally */
+  gap: 10px; /* Keeps a small space between the checkboxes */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.permissions label {
+  font-size: 16px;
+  display: flex;
+  align-items: center; /* Centers the checkbox and text vertically */
+}
+
+.permissions input {
+  margin-right: 5px;
+  transform: scale(1.1); /* Slightly increase the size of the checkbox */
+}
+
+/* Table for roles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+/* Action Buttons Styling */
+button.edit-btn,
+button.delete-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e67e22;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.delete-btn:active,
+.edit-btn:active {
+  transform: scale(0.98);
+}
+
+
+
+/* Feedback Message Styling */
+.feedback-message {
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.feedback-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.feedback-message.error {
+  background-color: #dc3545;
+  color: white;
+}

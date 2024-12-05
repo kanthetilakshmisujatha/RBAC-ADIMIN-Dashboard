@@ -1,0 +1,336 @@
+/* User Management Section */
+.user-management {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Title Styling */
+.user-management h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Form Styling for adding/editing users */
+.user-management form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Group the form inputs horizontally */
+.user-management .form-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Styling for input fields in the same group */
+.user-management form input,
+.user-management form select {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  max-width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Focused Input Fields with Shadow */
+.user-management form input:focus,
+.user-management form select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+/* Add User Button */
+.user-management form button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  width: 100%;
+  transition: transform 0.2s, background-color 0.3s ease;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.user-management form button:hover {
+  transform: scale(1.05);
+  background-color: #2980b9;
+}
+
+.user-management form button:active {
+  background-color: #1f5d8a;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+/* Action Buttons Styling */
+button.edit-btn,
+button.toggle-btn,
+button.delete-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  width: 110px;
+}
+
+button.edit-btn {
+  background-color: #f39c12;
+}
+
+button.toggle-btn {
+  background-color: #2ecc71;
+}
+
+button.delete-btn {
+  background-color: #e74c3c;
+}
+
+button.edit-btn:hover {
+  background-color: #e67e22;
+  transform: scale(1.1);
+}
+
+button.toggle-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.1);
+}
+
+button.delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+/* Search Bar - Positioned Above User Management Section */
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+/* Feedback Message */
+.feedback-message {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.feedback-message.success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.feedback-message.error {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Centering the whole user management content vertically */
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 20px;
+}
+
+/* Search Bar */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #3498db;
+  background-color: #ecf8ff;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3498db;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.search-icon:hover {
+  color: #2980b9;
+}
+
+/* User Count Styling */
+.user-counts {
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-counts p {
+  margin: 5px 0;
+}
+
+.user-counts .active {
+  color: green;
+}
+
+.user-counts .inactive {
+  color: red;
+}
+
+.user-counts strong {
+  color: #3498db;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .user-management {
+    padding: 15px;
+    width: 100%; /* Make the container full width on small screens */
+  }
+
+  .user-management h2 {
+    font-size: 1.6rem;
+  }
+
+  .user-management .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-management form input,
+  .user-management form select {
+    max-width: 100%; /* Allow inputs to take full width */
+  }
+
+  .user-management form button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Larger padding for easy tapping */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width search bar */
+    padding: 12px; /* Increase padding for better usability */
+  }
+
+  button.edit-btn,
+  button.toggle-btn,
+  button.delete-btn {
+    width: 100%; /* Full width buttons for easier clicking */
+    padding: 12px;
+    margin-right: 0; /* Remove margin for full width */
+  }
+
+  .user-counts p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .user-management {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .user-management h2 {
+    font-size: 1.7rem;
+  }
+
+  .user-management .form-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .user-management form input,
+  .user-management form select {
+    max-width: 100%;
+  }
+
+  .user-management form button {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 12px;
+  }
+
+  button.edit-btn,
+  button.toggle-btn,
+  button.delete-btn {
+    width: 100%;
+    padding: 12px;
+    margin-right: 0;
+  }
+
+  .user-counts p {
+    font-size: 15px;
+  }
+}
